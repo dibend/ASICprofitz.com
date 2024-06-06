@@ -8,7 +8,32 @@
         iframe {
             width: 100vw;
             height: 90vh;
+            border: 1px solid #ccc; /* Light gray border */
+            overflow: auto; /* Ensures scrollbars appear */
+            padding: 10px; /* Padding around the content */
+            position: relative; /* For positioning the Bitcoin icon */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
         }
+
+        /* Bitcoin B icon styling */
+        iframe::before {
+            content: "\20BF"; /* Unicode for Bitcoin symbol */
+            font-family: Arial, sans-serif; /* Font family */
+            font-size: 24px; /* Size of the Bitcoin symbol */
+            color: #f7931a; /* Bitcoin orange color */
+            background-color: white; /* White background for contrast */
+            border: 2px solid #f7931a; /* Border to highlight the icon */
+            border-radius: 50%; /* Rounded icon */
+            width: 36px; /* Width of the icon */
+            height: 36px; /* Height of the icon */
+            display: flex; /* Flexbox to center the icon */
+            align-items: center; /* Center alignment vertically */
+            justify-content: center; /* Center alignment horizontally */
+            position: absolute; /* Absolute positioning */
+            top: 10px; /* Positioning from the top */
+            left: 10px; /* Positioning from the left */
+        }
+
         body {
             background-color: darkolivegreen;
             color: orange;
